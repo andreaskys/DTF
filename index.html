@@ -5,18 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DietaFacil</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header style="display: flex; justify-content: space-between; align-items: center;">
-    <div class="tittle">
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+    <div class="title">
       <h1>Ficha Do Paciente</h1>
-    </div> 
-    <img src="img/.png" alt="Logo">
+    </div>
+    <img src="img/logo.png" alt="Logo" style="height: 50px;">
   </header>
   <main>
-    <section style="border: 2px solid black; border-radius: 10px; padding: 20px; background-color: #fff7f7;">
+    <section style="border: 2px solid black; border-radius: 10px; padding: 20px;">
       <h2 style="color: black; padding: 5px 10px; display: inline-block;">Informações Pessoais</h2>
       <form>
         <div style="margin-bottom: 10px;">
@@ -46,6 +44,107 @@
           <input type="text" id="conheceu" name="conheceu" style="width: 50%; border: none; border-bottom: 1px solid black;">
         </div>
       </form>
+    </section>
+
+    <section style="border: 2px solid black; border-radius: 10px; padding: 20px; margin-bottom: 20px;">
+      <h2 style="color: black; padding: 5px 10px; border-radius: 5px;">Anamnese Clínica</h2>
+      <form>
+        <div style="margin-bottom: 10px;">
+          <label for="diabetes">Diabetes:</label>
+          <input type="text" id="diabetes" name="diabetes" style="width: 80%; border: none; border-bottom: 1px solid black;">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <label for="hipertensao">Hipertensão / Hipotensão:</label>
+          <input type="text" id="hipertensao" name="hipertensao" style="width: 70%; border: none; border-bottom: 1px solid black;">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <label for="colesterol">Colesterol:</label>
+          <input type="text" id="colesterol" name="colesterol" style="width: 80%; border: none; border-bottom: 1px solid black;">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <label for="triglicerides">Triglicérides:</label>
+          <input type="text" id="triglicerides" name="triglicerides" style="width: 75%; border: none; border-bottom: 1px solid black;">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <label for="hipotireoidismo">Hipotireoidismo:</label>
+          <input type="text" id="hipotireoidismo" name="hipotireoidismo" style="width: 70%; border: none; border-bottom: 1px solid black;">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <label for="peso-desejado">Peso desejado:</label>
+          <input type="text" id="peso-desejado" name="peso-desejado" style="width: 70%; border: none; border-bottom: 1px solid black;">
+        </div>
+      </form>
+    </section>
+
+    <section style="border: 2px solid black; border-radius: 10px; padding: 20px; margin-bottom: 20px;">
+      <h2 style="color: black; padding: 5px 10px; border-radius: 5px;">Hábitos</h2>
+      <form>
+        <div style="display: flex; justify-content: space-between;">
+          <div style="width: 45%;">
+            <p>Não consome:</p>
+            <label><input type="checkbox" name="nao-consome" value="leite"> Leite</label><br>
+            <label><input type="checkbox" name="nao-consome" value="frutas"> Frutas e Verduras</label><br>
+            <label><input type="checkbox" name="nao-consome" value="carne"> Carne</label><br>
+            <label><input type="checkbox" name="nao-consome" value="frango"> Frango</label><br>
+            <label><input type="checkbox" name="nao-consome" value="peixe"> Peixe</label><br>
+            <label><input type="checkbox" name="nao-consome" value="ovo"> Ovo</label>
+          </div>
+          <div style="width: 45%;">
+            <p>Realiza atividade física?</p>
+            <label><input type="radio" name="atividade-fisica" value="sim"> Sim</label>
+            <label><input type="radio" name="atividade-fisica" value="nao"> Não</label><br>
+            <label for="qual">Qual?</label>
+            <input type="text" id="qual" name="qual" style="width: 80%; border: none; border-bottom: 1px solid black;"><br>
+            <label for="frequencia">Quantas vezes por semana?</label>
+            <input type="text" id="frequencia" name="frequencia" style="width: 80%; border: none; border-bottom: 1px solid black;">
+          </div>
+        </div>
+        <div style="margin-top: 10px;">
+          <label for="observacoes">Observações:</label>
+          <textarea id="observacoes" name="observacoes" style="width: 100%; border: 1px solid black; border-radius: 5px;"></textarea>
+        </div>
+      </form>
+    </section>
+
+    <section style="border: 2px solid black; border-radius: 10px; padding: 20px;">
+      <h2 style="color: black; padding: 5px 10px; border-radius: 5px;">Auriculoterapia</h2>
+      <form>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+          <label><input type="radio" name="auriculoterapia" value="constipacao"> Constipação</label>
+          <label><input type="radio" name="auriculoterapia" value="ansiedade"> Ansiedade</label>
+          <label><input type="radio" name="auriculoterapia" value="insonia"> Insônia</label>
+          <label><input type="radio" name="auriculoterapia" value="retencao"> Retenção de Líquido</label>
+          <label><input type="radio" name="auriculoterapia" value="nervosismo"> Nervosismo</label>
+          <label><input type="radio" name="auriculoterapia" value="dor-cabeca"> Dor de cabeça</label>
+        </div>
+      </form>
+    </section>
+
+    <section style="margin-top: 20px;">
+      <h2 style="margin-bottom: 10px;">Paciente</h2>
+      <input type="text" style="width: 100%; border: none; border-bottom: 1px solid black; margin-bottom: 20px;" placeholder="Nome do Paciente">
+      <table style="width: 100%; border-collapse: collapse; text-align: center;">
+        <thead>
+          <tr style="background-color: black; color: white;">
+            <th style="border: 1px solid black; padding: 5px;">DATA</th>
+            <th style="border: 1px solid black; padding: 5px;">PESO</th>
+            <th style="border: 1px solid black; padding: 5px;">GUIA</th>
+            <th style="border: 1px solid black; padding: 5px;">C</th>
+            <th style="border: 1px solid black; padding: 5px;">Q</th>
+            <th style="border: 1px solid black; padding: 5px;">OBS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid black; padding: 5px;"><input type="text" style="width: 100%; border: none; text-align: center;"></td>
+            <td style="border: 1px solid black; padding: 5px;"><input type="text" style="width: 100%; border: none; text-align: center;"></td>
+            <td style="border: 1px solid black; padding: 5px;"><input type="text" style="width: 100%; border: none; text-align: center;"></td>
+            <td style="border: 1px solid black; padding: 5px;"><input type="text" style="width: 100%; border: none; text-align: center;"></td>
+            <td style="border: 1px solid black; padding: 5px;"><input type="text" style="width: 100%; border: none; text-align: center;"></td>
+            <td style="border: 1px solid black; padding: 5px;"><input type="text" style="width: 100%; border: none; text-align: center;"></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
 </body>
