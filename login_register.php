@@ -1,6 +1,7 @@
 <?php
+
 session_start();
-require_once "config.php";
+require_once 'config.php';
 
 if(isset($_POST['register'])) {
   $name = $_POST['name'];
@@ -39,8 +40,8 @@ if(isset($_POST['login'])) {
       exit();
     } 
   }
-  $_SESSION['login_error'] = "Email ou senha incorretos";
-  $_SESSION['active_form'] = "login";
+  $_SESSION['login_error'] = 'Email ou senha incorretos';
+  $_SESSION['active_form'] = 'login';
   header("Location: index.php");
   exit();
 }

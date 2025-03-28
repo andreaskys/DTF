@@ -48,11 +48,11 @@
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="Password" placeholder="Password" required>
         <select name="role" required>
-          <option value="">--Select Role</option>
+          <option value="">--Select Role--</option>
           <option value="user">User</option>
           <option value="admin">Admin</option>
         </select>
-        <button type="submit" name="Login">Registre-se</button>
+        <button type="submit" name="register">Registre-se</button>
         <p>Ja tem login? <a href="#" onclick="showForm('login-form')">Login</a></p>
       </form>
     </div>
